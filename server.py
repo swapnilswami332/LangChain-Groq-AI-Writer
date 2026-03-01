@@ -33,7 +33,7 @@ app = FastAPI(
 class Topic(BaseModel):
     topic: str
 
-def generate_text(prompt: str, model: str = "llama-3.1-70b-versatile") -> str:
+def generate_text(prompt: str, model: str = "llama-3.1-mini") -> str:
     """
     Calls Groq API and returns the generated text.
     Includes debugging printouts for errors.
@@ -65,4 +65,5 @@ def groq_chat(t: Topic):
 
 # --- Run server ---
 if __name__ == "__main__":
+
     uvicorn.run(app, host="127.0.0.1", port=8000, reload=True)
