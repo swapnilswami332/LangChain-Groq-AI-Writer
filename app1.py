@@ -8,7 +8,7 @@ import uvicorn
 
 from groq import Groq
 
-# --- configuration ---------------------------------------------------------
+# --- configuration --------------------------------------------------------
 load_dotenv()
 # Load GROQ API key from environment or .env
 groq_api_key = os.getenv("GROQ_API_KEY")
@@ -21,7 +21,7 @@ if not groq_api_key:
 
 client = Groq(api_key=groq_api_key)
 
-# --- FastAPI application ---------------------------------------------------
+# --- FastAPI application --------------------------------------------------
 app = FastAPI(
     title="Groq LLM Server",
     version="1.0",
